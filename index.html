@@ -361,9 +361,9 @@
   <div class="agenda-head">
     <div>
       <div class="label">Commission pédagogique</div>
-      <h2>Programme &amp; agenda</h2>
+      <h2>Propositions &amp; objectifs</h2>
     </div>
-    <div class="agenda-count"><span id="progCount">0</span> programme(s) à venir</div>
+    <div class="agenda-count"><span id="progCount">0</span> proposition(s)</div>
   </div>
   <div class="config-notice" id="configNotice">
     ⚠️ Base de données non configurée. Ouvre le fichier HTML, cherche <code>firebaseConfig</code> tout en bas, et colle les identifiants de ton projet Firebase (voir le guide fourni).
@@ -463,7 +463,7 @@ function render(){
   tl.innerHTML = sorted.map(p => `
     <div class="prog-card">
       <button class="prog-del" onclick="deleteProg('${p.id}')">Supprimer</button>
-      <div class="prog-date">${fmtDate(p.date)}${p.time ? ' · ' + p.time : ''}</div>
+      <div class="prog-date">${p.date ? fmtDate(p.date) + (p.time ? ' · ' + p.time : '') : escapeHtml(p.status || 'Proposition') + (p.priority ? ' · ' + escapeHtml(p.priority) : '')}</div>
       <h3>${escapeHtml(p.title)}</h3>
       <div class="prog-meta">
         ${p.lieu ? `<span>📍 ${escapeHtml(p.lieu)}</span>` : ''}
