@@ -321,7 +321,7 @@
   </div>
   <div class="hero-portrait">
     <div class="portrait-frame">
-      <img src="../image/IMG_9500_31500.jpg" alt="Portrait de Seydina Ousmane Kebe">
+      <img src="image/IMG_9500_31500.jpg" alt="Portrait de Seydina Ousmane Kebe">
       <div class="tag">Votre candidat</div>
     </div>
   </div>
@@ -366,7 +366,7 @@
     <div class="agenda-count"><span id="progCount">0</span> proposition(s)</div>
   </div>
   <div class="config-notice" id="configNotice">
-    ⚠️ Base de données non configurée. Ouvre le fichier HTML, cherche <code>firebaseConfig</code> tout en bas, et colle les identifiants de ton projet Firebase (voir le guide fourni).
+    ⚠️ Les propositions sont chargées depuis le fichier <code>programmes.json</code>. Modifie ce fichier pour actualiser le contenu.
   </div>
   <div class="timeline" id="timeline">
     <!-- programmes injectés en JS -->
@@ -409,13 +409,10 @@
 
 <script>
 /* =========================================================
-   CONFIGURATION FIREBASE — À REMPLIR PAR TOI
-   1. Va sur https://console.firebase.google.com
-   2. Crée un projet gratuit (ex. "aeertm-campagne")
-   3. Ajoute une "Web app" dans les paramètres du projet
-   4. Copie les valeurs fournies ci-dessous, à la place de celles-ci
-   5. Active "Firestore Database" (mode production ou test)
-   Guide détaillé fourni séparément par Claude.
+   CONFIGURATION STATIQUE — programmes.json
+   1. Les propositions sont chargées depuis le fichier `programmes.json`
+   2. Modifie ce fichier manuellement dans le dépôt pour publier des mises à jour
+   3. En mode organisateur, tu peux télécharger la version JSON actuelle
    ========================================================= */
 
 const ADMIN_CODE = 'AEERTM2026';

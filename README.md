@@ -1,12 +1,13 @@
 # Héberger ce site sur GitHub Pages
 
-Ce dépôt contient une page de campagne (HTML/CSS/JS). Suivez les instructions ci-dessous pour la publier sur GitHub Pages.
+Ce dépôt contient une page de campagne (HTML/CSS/JS) prête à être publiée sur GitHub Pages.
 
 Étapes rapides (recommandées) :
 
-1. Copier `campagne-kebe (1).html` en `index.html` (déjà fait localement par ce script).
-2. Créer un dépôt GitHub et ajouter le remote `origin`.
-3. Pousser la branche `main` puis activer GitHub Pages depuis les paramètres du dépôt (Source: `main` / root).
+1. Vérifiez que `index.html` est présent à la racine du dépôt.
+2. Modifiez `programmes.json` pour mettre à jour les propositions.
+3. Créez un dépôt GitHub, ajoutez le remote `origin`, puis poussez la branche `main`.
+4. Activez GitHub Pages depuis les paramètres du dépôt (Source: `main` / root).
 
 Commandes utiles (remplacez `USERNAME` et `REPO`):
 
