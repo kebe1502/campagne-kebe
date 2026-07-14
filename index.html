@@ -553,19 +553,25 @@ document.getElementById('downloadJson').addEventListener('click', (e)=>{ e.preve
 // Initialise le chargement des programmes.
 // On tente de charger `programmes.json`; si `fetch` est bloqué (ex: ouverture via file://),
 // on utilise un jeu de données intégré (fallback) pour garantir l'affichage local.
-const embeddedFallback = [
-  { id: 'p1', title: 'Réunion de rentrée', date: '2026-08-28', time: '14:00', lieu: 'Amphi 200, Thiès', desc: "Ouverture officielle de l'année : présentation du calendrier, des commissions et rencontre avec les représentants." },
-  { id: 'p2', title: 'Atelier méthodologie', date: '2026-09-04', time: '10:00', lieu: 'Salle 12, Touba', desc: 'Techniques de prise de notes, gestion du temps et méthodologie des examens.' },
-  { id: 'p3', title: 'Forum des associations', date: '2026-09-11', time: '09:30', lieu: 'Hall Central', desc: "Rencontrez les associations étudiantes, découvrez les activités et inscrivez-vous aux groupes." },
-  { id: 'p4', title: 'Rencontre enseignants-étudiants', date: '2026-09-22', time: '16:00', lieu: 'Amphi 3', desc: "Échanges sur l'amélioration des supports pédagogiques et des évaluations." },
-  { id: 'p5', title: 'Atelier orientation professionnelle', date: '2026-10-02', time: '11:00', lieu: 'Centre de carrière', desc: 'CV, lettre de motivation et simulation d'entretiens avec des intervenants du secteur.' },
-  { id: 'p6', title: 'Journée solidarité étudiante', date: '2026-10-16', time: '09:00', lieu: 'Campus central', desc: 'Collecte de fournitures scolaires et actions de soutien pour les étudiants en difficulté.' },
-  { id: 'p7', title: 'Atelier gestion du stress', date: '2026-11-05', time: '14:30', lieu: 'Salle polyvalente', desc: "Techniques de relaxation et conseils pour préparer la période des examens." },
-  { id: 'p8', title: 'Table ronde : pédagogie innovante', date: '2026-11-19', time: '18:00', lieu: 'Amphi 1', desc: "Discussion avec des intervenants sur les méthodes actives et l'usage du numérique en cours." },
-  { id: 'p9', title: 'Visite entreprises partenaires', date: '2026-12-03', time: '08:30', lieu: 'Départ du campus', desc: 'Journée de visites chez nos partenaires pour découvrir les métiers et opportunités de stage.' },
-  { id: 'p10', title: 'Préparation aux examens - Q&A', date: '2026-12-10', time: '15:00', lieu: 'Amphi 2', desc: 'Séance de questions-réponses : conseils de révision, planning et ressources.' },
-  { id: 'p11', title: 'Cérémonie de clôture semestre', date: '2026-12-18', time: '17:00', lieu: 'Grande Salle', desc: 'Bilan semestriel, remise de certificats et pot de clôture pour la communauté étudiante.' }
-];
+const embeddedFallback = (function(){
+  try{
+    return JSON.parse(`[
+      {"id":"p1","title":"Réunion de rentrée","date":"2026-08-28","time":"14:00","lieu":"Amphi 200, Thiès","desc":"Ouverture officielle de l'année : présentation du calendrier, des commissions et rencontre avec les représentants."},
+      {"id":"p2","title":"Atelier méthodologie","date":"2026-09-04","time":"10:00","lieu":"Salle 12, Touba","desc":"Techniques de prise de notes, gestion du temps et méthodologie des examens."},
+      {"id":"p3","title":"Forum des associations","date":"2026-09-11","time":"09:30","lieu":"Hall Central","desc":"Rencontrez les associations étudiantes, découvrez les activités et inscrivez-vous aux groupes."},
+      {"id":"p4","title":"Rencontre enseignants-étudiants","date":"2026-09-22","time":"16:00","lieu":"Amphi 3","desc":"Échanges sur l'amélioration des supports pédagogiques et des évaluations."},
+      {"id":"p5","title":"Atelier orientation professionnelle","date":"2026-10-02","time":"11:00","lieu":"Centre de carrière","desc":"CV, lettre de motivation et simulation d'entretiens avec des intervenants du secteur."},
+      {"id":"p6","title":"Journée solidarité étudiante","date":"2026-10-16","time":"09:00","lieu":"Campus central","desc":"Collecte de fournitures scolaires et actions de soutien pour les étudiants en difficulté."},
+      {"id":"p7","title":"Atelier gestion du stress","date":"2026-11-05","time":"14:30","lieu":"Salle polyvalente","desc":"Techniques de relaxation et conseils pour préparer la période des examens."},
+      {"id":"p8","title":"Table ronde : pédagogie innovante","date":"2026-11-19","time":"18:00","lieu":"Amphi 1","desc":"Discussion avec des intervenants sur les méthodes actives et l'usage du numérique en cours."},
+      {"id":"p9","title":"Visite entreprises partenaires","date":"2026-12-03","time":"08:30","lieu":"Départ du campus","desc":"Journée de visites chez nos partenaires pour découvrir les métiers et opportunités de stage."},
+      {"id":"p10","title":"Préparation aux examens - Q&A","date":"2026-12-10","time":"15:00","lieu":"Amphi 2","desc":"Séance de questions-réponses : conseils de révision, planning et ressources."},
+      {"id":"p11","title":"Cérémonie de clôture semestre","date":"2026-12-18","time":"17:00","lieu":"Grande Salle","desc":"Bilan semestriel, remise de certificats et pot de clôture pour la communauté étudiante."}
+    ]`);
+  }catch(e){
+    return [];
+  }
+})();
 
 // Start
 listenProgrammes();
