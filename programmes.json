@@ -4,7 +4,7 @@
   {"id":"o2","title":"Ateliers de méthodologie continu","status":"À définir","priority":"Moyenne","desc":"Organiser des ateliers récurrents sur la prise de notes, la gestion du temps et les techniques d'examen."},
   {"id":"o4","title":"Bourse solidarité étudiante","status":"Proposé","priority":"Haute","desc":"Créer un fond d'aide pour soutenir les étudiants en difficulté financière (avec collecte annuelle)."},
   {"id":"o6","title":"Atelier orientation professionnelle","status":"Proposé","priority":"Moyenne","desc":"Sessions pour CV, lettres de motivation et simulations d'entretiens avec mentors externes."},
-  {"id":"o7","title":"Actions culturelles et sportives","status":"En projet","priority":"Basse","desc":"Organiser des événements culturels et sportifs pour renforcer la cohésion étudiante."},
+  {"id":"o7","title":"Organisation de génies en herbes et débats","status":"En projet","priority":"Haute","desc":"Créer des rencontres d'élèves brillants et des débats ouverts pour stimuler l'esprit critique et la créativité."},
   {"id":"o9","title":"Formation au bien-être et gestion du stress","status":"À définir","priority":"Moyenne","desc":"Ateliers et ressources pour la santé mentale et la gestion du stress avant les examens."},
   {"id":"o10","title":"Révision collaborative avant les examens","status":"Proposé","priority":"Haute","desc":"Sessions de révision organisées par matière avec des volontaires parmi les meilleurs étudiants."}
 ]
