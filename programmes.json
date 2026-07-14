@@ -1,0 +1,26 @@
+[
+  {
+    "id": "p1",
+    "title": "Réunion de rentrée",
+    "date": "2026-09-05",
+    "time": "14:00",
+    "lieu": "Amphi 200, Thiès",
+    "desc": "Présentation du calendrier, rencontres des délégués et échanges sur les priorités pédagogiques."
+  },
+  {
+    "id": "p2",
+    "title": "Atelier méthodologie",
+    "date": "2026-09-12",
+    "time": "10:00",
+    "lieu": "Salle 12, Touba",
+    "desc": "Techniques de travail, gestion du temps et préparation aux examens."
+  },
+  {
+    "id": "p3",
+    "title": "Journée solidarité étudiante",
+    "date": "2026-10-02",
+    "time": "09:00",
+    "lieu": "Campus central",
+    "desc": "Collecte de fournitures et actions de soutien pour les étudiants en difficulté."
+  }
+]
